@@ -1,0 +1,773 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOS5fka22m6Bg1GUVdp3U5l",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/httpMatheus-dev/inteligencia-artificial-umc/blob/main/12%20ate%20a%2022%20feitas\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Exercícios de Python — Lista 1\n",
+        "\n",
+        "**Aluno:** Matheus Gabriel Alves da Silva | **RGM:** 11241100109  \n",
+        "**Turma:** 6B — Noturno | **Disciplina:** Inteligência Artificial — UMC"
+      ],
+      "metadata": {
+        "id": "178YfrYnZb8I"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#1 - Imprima \"Hello, World!\" no console\n",
+        "\n",
+        "print('Hello, world!')"
+      ],
+      "metadata": {
+        "id": "kYUSTwd9ZIg-"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#2 - Crie um programa que peça ao usuário dois números e exiba a soma deles.\n",
+        "numA = int(input('Digite um numero '))\n",
+        "numB = int(input('Digite um segundo numero '))\n",
+        "total = numA + numB\n",
+        "print('Valor total = ', total)"
+      ],
+      "metadata": {
+        "id": "y0kGVtztbMFo"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Exercício 03 — Área do Círculo\n",
+        "\n",
+        "**Abordagem:**\n",
+        "\n",
+        "- **math.pi:** utilizei para representar o valor de π com maior precisão, tornando o cálculo da área mais preciso e o código mais legível.\n",
+        "- **try/except:** utilizei para tratar possíveis erros de entrada. Caso o usuário digite um valor inválido, o programa não será interrompido e exibirá uma mensagem informando o erro.\n",
+        "- **float:** utilizei porque o raio pode possuir valores decimais.\n",
+        "- **round:** utilizei para exibir o resultado da área com apenas duas casas decimais, melhorando esteticamente."
+      ],
+      "metadata": {
+        "id": "1LavZYz4lGPo"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#3 - Solicite o raio de um círculo e calcule sua área. Use a fórmula área =π * r².\n",
+        "\n",
+        "import math\n",
+        "try:\n",
+        "  raio = float(input('Digite o raio: '))\n",
+        "  area = math.pi * raio**2\n",
+        "  print('Valor da área:', round(area, 2))\n",
+        "except ValueError:\n",
+        "  print('Digite apenas valores numericos.')\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "5SSAaqjQdBfu",
+        "outputId": "f402d4d3-7256-445b-9e69-c48165da0c9c"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite o raio: 10\n",
+            "Valor da área: 314.16\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#4 - Conversão de Temperatura  o Converta uma temperatura fornecida em Celsius para Fahrenheit  usando a fórmula F = C * 9/5 + 32.\n",
+        "#Mesmo raciocinio do exercicio 3, so mudei o round para apenas uma casa decimal ja que se trata de graus\n",
+        "try:\n",
+        "  grauC = float(input('Digite os graus celsius '))\n",
+        "  grauF = grauC * 9/5 + 32\n",
+        "  print('O valor em Fahrenheit é: ',round(grauF, 1))\n",
+        "except ValueError:\n",
+        "  print('Digite apenas valores numericos.')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "3j0cT_MnjAgh",
+        "outputId": "9839f2f2-fcec-40c8-f301-471ce9d4efd0"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite os graus celsius 32.5\n",
+            "O valor em Fahrenheit é:  90.5\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# **Abordagem:**\n",
+        "\n",
+        "- **`for`:** decidi utilizar o `for` devido saber quantas vezes quero repetir. Como é uma tabuada, então o mais convencional foi até o 10.\n",
+        "- **`range(1, 11)`:** foi que se caso utilizasse `range(1, 10)` iria fazer só até o 9 e não repetiria toda a tabuada.\n",
+        "- **Demais decisões:** `try/except` e conversão de entrada seguem o mesmo padrão adotado no exercício 3."
+      ],
+      "metadata": {
+        "id": "awNmaqlKwQ2B"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#5 - Crie um programa que imprima a tabuada de um número fornecido pelo usuário.\n",
+        "\n",
+        "try:\n",
+        "    numA = int(input('Digite um numero, e veja a sua tabuada: '))\n",
+        "    for contador in range(1, 11):\n",
+        "      resultado = (numA * contador)\n",
+        "      print(numA, \"x\", contador, \"=\", resultado)\n",
+        "except ValueError:\n",
+        "    print('Digite apenas valores numericos.')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "collapsed": true,
+        "id": "HEhJwi9Nn6Bs",
+        "outputId": "66c504e4-9549-4f0c-df9b-7c7531bf09c3"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite um numero: 5\n",
+            "5  x  1  =  5\n",
+            "5  x  2  =  10\n",
+            "5  x  3  =  15\n",
+            "5  x  4  =  20\n",
+            "5  x  5  =  25\n",
+            "5  x  6  =  30\n",
+            "5  x  7  =  35\n",
+            "5  x  8  =  40\n",
+            "5  x  9  =  45\n",
+            "5  x  10  =  50\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#6 - Faça um programa que exiba todos os números pares de 1 a 20.\n",
+        "for i in range(1, 21):\n",
+        "  if i % 2 == 0:\n",
+        "    print(i)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "collapsed": true,
+        "id": "4r54b8ADCW6Y",
+        "outputId": "7fddc9a5-159e-468c-f0cb-bf218ce22b63"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "2\n",
+            "4\n",
+            "6\n",
+            "8\n",
+            "10\n",
+            "12\n",
+            "14\n",
+            "16\n",
+            "18\n",
+            "20\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#7 - Solicite um número ao usuário e informe se ele é par ou ímpar.\n",
+        "try:\n",
+        "  numA = int(input(\"Digite um numero e veja se é PAR ou IMPAR: \"))\n",
+        "  if numA % 2 == 0:\n",
+        "    print(\"Seu número é PAR\")\n",
+        "  else:\n",
+        "    print(\"Seu número é IMPAR\")\n",
+        "except ValueError:\n",
+        "    print('Digite apenas valores numericos.')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "collapsed": true,
+        "id": "TZBYW6snFqnb",
+        "outputId": "37a252cd-4eb1-4c06-e217-ff5306e9700e"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite um numero e veja se é PAR ou IMPAR: 20\n",
+            "Seu número é PAR\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Abordagem:**\n",
+        "\n",
+        "- **` [::-1]` :** decidi utilizar o fatiamento de string por ser uma forma simples e direta de inverter a palavra. Com isso, foi possível comparar a palavra original com a invertida para verificar se ela é um palíndromo.\n",
+        "- **` if/else`:** utilizei para verificar se a palavra original é igual à palavra invertida. Se forem iguais, a palavra é um palíndromo; caso contrário, não é."
+      ],
+      "metadata": {
+        "id": "VJQlRl1bL_zV"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#8 - Crie um programa que verifique se uma palavra é um palíndromo\n",
+        "\n",
+        "palavra = input(\"Digite uma palavra: \")\n",
+        "\n",
+        "if palavra == palavra[::-1]:\n",
+        "    print(\"É um palíndromo!\")\n",
+        "else:\n",
+        "    print(\"Não é um palíndromo!\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "6djI_NUtIMdL",
+        "outputId": "98a8486e-e3f0-4f6b-e18d-26ab2f78879f"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite uma palavra: python\n",
+            "Não é um palíndromo!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#9 - Calcule o fatorial de um número fornecido pelo usuário.\n",
+        "#decidi iniciar a variável com o valor 1 porque o fatorial é calculado através de multiplicações.\n",
+        "try:\n",
+        "  numA = int(input(\"Digite um numero \"))\n",
+        "  fatorial = 1\n",
+        "  for i in range(1, numA + 1):\n",
+        "    fatorial *= i\n",
+        "  print(\"O numero fatorial é: \", fatorial)\n",
+        "except ValueError:\n",
+        "    print('Digite apenas valores numericos.')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "eLnXPiqJOtoe",
+        "outputId": "418fcdd6-d2cf-48f3-80b0-771202ed29f0"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite um numero 2\n",
+            "O numero fatorial é:  2\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 10 - Imprima os primeiros 10 números da sequência de Fibonacci.\n",
+        "numA = 0\n",
+        "numB = 1\n",
+        "print('A sequencia dos os primeiros 10 números da sequência de Fibonacci')\n",
+        "for i in range(10):\n",
+        "    print(numA)\n",
+        "    result = numA + numB\n",
+        "    numA = numB\n",
+        "    numB = result\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "collapsed": true,
+        "id": "ZLbKpuVMQEOy",
+        "outputId": "3ef831c0-78f0-4b00-ada8-2266502efa81"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "A sequencia de fibonnaci\n",
+            "0\n",
+            "1\n",
+            "1\n",
+            "2\n",
+            "3\n",
+            "5\n",
+            "8\n",
+            "13\n",
+            "21\n",
+            "34\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 11 - o Crie uma lista de números e exiba o maior e o menor número.\n",
+        "# max e min decidi usar o `max` e `min` porque é uma abordagem mais simples de manusear a lista.\n",
+        "listaNumerica = [7, 9, 2, 6, 1, 10, 4, 3]\n",
+        "numMax = max(listaNumerica)\n",
+        "print(\"O numero maior é: \", numMax)\n",
+        "numMin = min(listaNumerica)\n",
+        "print(\"O numero menor é: \", numMin)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "collapsed": true,
+        "id": "jvzR2JkSTn6K",
+        "outputId": "64756730-32db-4776-c84f-3c69bf0ce64a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "O numero maior é:  10\n",
+            "O numero menor é:  1\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 12 - Conte o número de ocorrências de cada caractere em uma string fornecida.\n",
+        "#Decidi utilizar dicionario porque a quantidade de contadores é desconhecida antes da execução\n",
+        "\n",
+        "texto = input(\"Digite uma frase ou palavra: \")\n",
+        "contagem = {}\n",
+        "for caractere in texto:\n",
+        "    if caractere in contagem:\n",
+        "        contagem[caractere] += 1\n",
+        "    else:\n",
+        "        contagem[caractere] = 1\n",
+        "print(contagem)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "collapsed": true,
+        "id": "jWtZSQpjv0oG",
+        "outputId": "42454bff-80c9-4ffc-ab15-af23206c3fd6"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite uma frase ou palavra: calleri\n",
+            "{'c': 1, 'a': 1, 'l': 2, 'e': 1, 'r': 1, 'i': 1}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 13 - Dada uma lista de números, ordene-a em ordem crescente.\n",
+        "#Resolvi criar uma lista nova utilizando o sorted com isso mantendo a original\n",
+        "listaNumerica = [22, 13, 69, 8, 0, 2, 4, 6, 7, 6, 99]\n",
+        "listaOrdenada = sorted(listaNumerica)\n",
+        "print(\"Lista desorganizada\",listaNumerica)\n",
+        "print(\"Lista organizada \",listaOrdenada)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "CAY616__xx9u",
+        "outputId": "f0b91059-e853-463e-e50b-9dee839c282d"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Lista desorganizada [22, 13, 69, 8, 0, 2, 4, 6, 7, 6, 99]\n",
+            "Lista organizada  [0, 2, 4, 6, 6, 7, 8, 13, 22, 69, 99]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 14 Calcule a soma de todos os elementos em uma lista.\n",
+        "#Utilizei o for in, para percorrer a lista para treinar, a outra opcao seria o SUM, porem ficaria repetitivo\n",
+        "listaNumerica = [22, 13, 69, 8, 0, 2, 4, 6, 7, 6, 99]\n",
+        "\n",
+        "soma = 0\n",
+        "for numero in listaNumerica:\n",
+        "    soma += numero\n",
+        "\n",
+        "print(soma)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "TsHP8sJOzXpx",
+        "outputId": "524e8f9e-7e55-4348-d360-f7a1fcad7add"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "236\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 15 - Calcule a média dos números em uma lista.\n",
+        "listaNumerica = [22, 13, 69, 8, 0, 2, 4, 6, 7, 6, 99]\n",
+        "\n",
+        "soma = sum(listaNumerica)\n",
+        "qtd = len(listaNumerica)\n",
+        "media = soma / qtd\n",
+        "print('A media é', round(media, 2))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "hD4QZQlQ1TI2",
+        "outputId": "d3818c06-1ebf-4134-b8dc-1f816f477fd0"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "A media é 21.45\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 16 - Crie um programa que inverta uma string fornecida pelo usuário.\n",
+        "palavra = input('Digite uma palavra ')\n",
+        "\n",
+        "invertida = ''\n",
+        "for letra in palavra:\n",
+        "    invertida = letra + invertida\n",
+        "print(invertida)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "WUuC5cbr2U9v",
+        "outputId": "6a3d3fb2-062f-424a-f233-55673d80ed2b"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite uma palavra python\n",
+            "nohtyp\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 17 - Conte a frequência de cada palavra em uma string fornecida pelo usuário.\n",
+        "texto = input(\"Digite uma frase ou palavra: \")\n",
+        "contagem = {}\n",
+        "for palavra in texto.split():\n",
+        "    if palavra in contagem:\n",
+        "        contagem[palavra] += 1\n",
+        "    else:\n",
+        "        contagem[palavra] = 1\n",
+        "print(contagem)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "tbKUh9OX4QV8",
+        "outputId": "95b21afa-d570-4ec1-d5e5-8b04924f959b"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite uma frase ou palavra: o rato roeu a roupa\n",
+            "{'o': 1, 'rato': 1, 'roeu': 1, 'a': 1, 'roupa': 1}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 18 - Crie um programa que verifique se um número fornecido é primo\n",
+        "#Utilizei o for para verificar se o número possui algum divisor entre 2 e ele mesmo. Usei o operador % para verificar se a divisão é exata e o break para encerrar o laço assim que encontrar um divisor, com isso sabemos que o número não é primo.\n",
+        "numero = int(input(\"Digite um número: \"))\n",
+        "\n",
+        "if numero < 2:\n",
+        "    print(\"Não é primo.\")\n",
+        "else:\n",
+        "    primo = True\n",
+        "\n",
+        "    for i in range(2, numero):\n",
+        "        if numero % i == 0:\n",
+        "            primo = False\n",
+        "            break\n",
+        "\n",
+        "    if primo:\n",
+        "        print(\"É primo.\")\n",
+        "    else:\n",
+        "        print(\"Não é primo.\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "collapsed": true,
+        "id": "HLxFEqMzjsfE",
+        "outputId": "5782f076-a5aa-4b06-f406-8218a5d3ef79"
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite um número: 8\n",
+            "Não é primo.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 19 -Implemente um jogo onde o usuário deve adivinhar um número gerado aleatoriamente pelo computador.\n",
+        "#Utilizei a biblioteca random para gerar um número aleatório. Usei o randint para que o número seja inteiro e o 0, 10 define o intervalo do sorteio. Deixei a variável numero iniciando em -1 para que seja diferente do número sorteado e o while possa iniciar o loop.\n",
+        "import random\n",
+        "numeroAleatorio = random.randint(0, 10)\n",
+        "numero = -1\n",
+        "while numero != numeroAleatorio:\n",
+        "  numero = int(input('Digite um numero e tente adivnhar o numero gerado, de 0 a 10: '))\n",
+        "  if numero == numeroAleatorio:\n",
+        "    print(\"Parabens, voce acertou!!!\")\n",
+        "  else:\n",
+        "    print('Tente novamente')"
+      ],
+      "metadata": {
+        "id": "6Pd6sjBVoLrS"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 20 -  Dada uma matriz (lista de listas), crie sua matriz transposta.\n",
+        "#Utilizei uma lista para representar a matriz e outra para armazenar a matriz transposta. Usei dois laços for, onde o primeiro percorre as colunas e o segundo percorre as linhas, adicionando os valores na posição invertida para formar a matriz transposta.\n",
+        "matriz = [[1, 2, 3], [4, 5, 6]]\n",
+        "transposta = []\n",
+        "\n",
+        "for coluna in range(len(matriz[0])):\n",
+        "    novaLinha = []\n",
+        "\n",
+        "    for linha in range(len(matriz)):\n",
+        "        novaLinha.append(matriz[linha][coluna])\n",
+        "\n",
+        "    transposta.append(novaLinha)\n",
+        "\n",
+        "print(transposta)\n"
+      ],
+      "metadata": {
+        "id": "_GLGqMq_rI3B"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 21 - Implemente a busca binária para encontrar um elemento em uma lista ordenada.\n",
+        "# Utilizei as variáveis inicio e fim para definir o intervalo da busca. O while repete enquanto ainda existem posições para verificar. A variável meio calcula a posição central da lista e, com as condições if e elif, verifica se o número está no meio, à esquerda ou à direita. Quando o número é encontrado, utilizei o break para encerrar o laço, e caso não seja encontrado, o programa informa isso ao final.\n",
+        "numeros = [3, 7, 12, 18, 24, 31, 45, 52, 60, 67, 73, 81, 88, 94, 99]\n",
+        "\n",
+        "procurado = int(input(\"Digite o número que deseja procurar: \"))\n",
+        "\n",
+        "inicio = 0\n",
+        "fim = len(numeros) - 1\n",
+        "\n",
+        "while inicio <= fim:\n",
+        "    meio = (inicio + fim) // 2\n",
+        "\n",
+        "    if numeros[meio] == procurado:\n",
+        "        print(\"Número encontrado na posição:\", meio)\n",
+        "        break\n",
+        "\n",
+        "    elif procurado < numeros[meio]:\n",
+        "        fim = meio - 1\n",
+        "\n",
+        "    else:\n",
+        "        inicio = meio + 1\n",
+        "\n",
+        "if inicio > fim:\n",
+        "    print(\"Número não encontrado.\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Msb_9sm8oQZM",
+        "outputId": "ce69b502-7efd-45ec-d41b-53c6a254cf07"
+      },
+      "execution_count": 30,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite o número que deseja procurar: 7\n",
+            "Número encontrado na posição: 1\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 22 - Crie uma função para criptografar uma mensagem usando a cifra de César.\n",
+        "#Criei o alfabeto para conseguir encontrar a posição de cada letra e usei o for para percorrer a mensagem. O deslocamento define quantas posições a letra vai avançar no alfabeto e o % 26 faz voltar ao início quando passar da letra z\n",
+        "def criptografar(mensagem, deslocamento):\n",
+        "    alfabeto = \"abcdefghijklmnopqrstuvwxyz\"\n",
+        "    resultado = \"\"\n",
+        "\n",
+        "    for letra in mensagem:\n",
+        "        if letra in alfabeto:\n",
+        "            posicao = alfabeto.index(letra)\n",
+        "            nova_posicao = (posicao + deslocamento) % 26\n",
+        "            resultado += alfabeto[nova_posicao]\n",
+        "        else:\n",
+        "            resultado += letra\n",
+        "\n",
+        "    return resultado\n",
+        "\n",
+        "\n",
+        "mensagem = input(\"Digite uma mensagem: \").lower()\n",
+        "deslocamento = int(input(\"Digite o deslocamento: \"))\n",
+        "\n",
+        "print(criptografar(mensagem, deslocamento))"
+      ],
+      "metadata": {
+        "id": "ErsgU4ovt3v6"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
