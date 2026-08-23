@@ -11,5 +11,7 @@ Repositório da disciplina de Inteligência Artificial.
   50 exercícios da Lista 1, resolvidos e comentados.
 - `Exercicios_DataScience_MatheusGabrielAlves_6B_Noturno.ipynb` — Lista 2: 80 exercícios
   das bibliotecas NumPy, SciPy, Pandas e Matplotlib. Entrega em 23/08/2026.
+- `vendas.xlsx` — arquivo de apoio para o exercício 2 (Pandas) da Lista 2,
+  lido via pd.read_excel().
 - `desenvolvimento/` — versões parciais salvas ao longo do desenvolvimento,
   organizadas por faixa de exercícios.
