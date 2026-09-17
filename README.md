@@ -18,6 +18,10 @@ Repositório da disciplina de Inteligência Artificial.
   dos dados, treinamento e avaliação do modelo. Notebook criado no Kaggle a partir do
   dataset `menegidio/iris-species`. Entrega em 10/09/2026.  
   [Ver no Kaggle](https://www.kaggle.com/code/matheusgabrielalves/iris-classifica-o-com-svm-matheus-gabriel-alv)
+  - `svm-aptidao-fisica.ipynb` — classificação de aptidão física com SVM. Trabalho em
+  dupla com José Murilo de Sá Bezerra (RGM 11241103548). Dataset
+  `muhammedderric/fitness-classification-dataset-synthetic`. Entrega em 16/09/2026.  
+  [Ver no Kaggle](https://www.kaggle.com/code/matheusgabrielalves/ia-svm-aptid-o-f-sica-6b-noite)
 
 ## Arquivos de apoio
 
