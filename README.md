@@ -22,7 +22,7 @@ Repositório da disciplina de Inteligência Artificial.
   aplicada à observação de jovens atletas (*scouting*). Trabalho em dupla com José Murilo
   de Sá Bezerra (RGM 11241103548). Dataset `talhademirezen/fc-26-player-stats`.
   Acurácia de 88,03% contra baseline de 70,17%. Entrega em 24/09/2026.  
-  [Ver no Kaggle]((https://www.kaggle.com/code/matheusgabrielalves/ia-svm-perfil-tecnico-de-elite-fc-26-6b-noite))
+  [Ver no Kaggle](https://www.kaggle.com/code/matheusgabrielalves/ia-svm-perfil-tecnico-de-elite-fc-26-6b-noite)
 - `svm-aptidao-fisica.ipynb` — classificação de aptidão física com SVM. Versão inicial do
   trabalho em dupla, substituída pela análise do FC 26 por sobreposição de dataset com
   outro grupo da turma. Dataset `muhammedderric/fitness-classification-dataset-synthetic`.
