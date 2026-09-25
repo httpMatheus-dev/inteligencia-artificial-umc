@@ -5,7 +5,7 @@ Repositório da disciplina de Inteligência Artificial.
 **Aluno:** Matheus Gabriel Alves da Silva  
 **RGM:** 11241100109  
 **Turma:** 6B — Período Noturno  
-**Professor:** Fabiano B. Menegidio
+**Professores:** Fabiano B. Menegidio e Higor Barreto Campos
 
 ## Notebooks
 
@@ -18,9 +18,15 @@ Repositório da disciplina de Inteligência Artificial.
   dos dados, treinamento e avaliação do modelo. Notebook criado no Kaggle a partir do
   dataset `menegidio/iris-species`. Entrega em 10/09/2026.  
   [Ver no Kaggle](https://www.kaggle.com/code/matheusgabrielalves/iris-classifica-o-com-svm-matheus-gabriel-alv)
-- `svm-aptidao-fisica.ipynb` — classificação de aptidão física com SVM. Trabalho em
-  dupla com José Murilo de Sá Bezerra (RGM 11241103548). Dataset
-  `muhammedderric/fitness-classification-dataset-synthetic`. Entrega em 16/09/2026.  
+- `svm-perfil-elite-fc26.ipynb` — identificação de perfil técnico de elite com SVM,
+  aplicada à observação de jovens atletas (*scouting*). Trabalho em dupla com José Murilo
+  de Sá Bezerra (RGM 11241103548). Dataset `talhademirezen/fc-26-player-stats`.
+  Acurácia de 88,03% contra baseline de 70,17%. Entrega em 24/09/2026.  
+  [Ver no Kaggle]((https://www.kaggle.com/code/matheusgabrielalves/ia-svm-perfil-tecnico-de-elite-fc-26-6b-noite))
+- `svm-aptidao-fisica.ipynb` — classificação de aptidão física com SVM. Versão inicial do
+  trabalho em dupla, substituída pela análise do FC 26 por sobreposição de dataset com
+  outro grupo da turma. Dataset `muhammedderric/fitness-classification-dataset-synthetic`.
+  Entrega em 16/09/2026.  
   [Ver no Kaggle](https://www.kaggle.com/code/matheusgabrielalves/ia-svm-aptid-o-f-sica-6b-noite)
 
 ## Arquivos de apoio
