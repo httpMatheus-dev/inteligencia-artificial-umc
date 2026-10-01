@@ -28,6 +28,12 @@ Repositório da disciplina de Inteligência Artificial.
   outro grupo da turma. Dataset `muhammedderric/fitness-classification-dataset-synthetic`.
   Entrega em 16/09/2026.  
   [Ver no Kaggle](https://www.kaggle.com/code/matheusgabrielalves/ia-svm-aptid-o-f-sica-6b-noite)
+- `av-ia-classificacao-iris-matheus.ipynb` — classificação do dataset Iris com quatro
+  modelos: SVM, Árvore de Decisão, Floresta Aleatória e Boosting (Gradient Boosting).
+  Cada modelo é executado sem e com `GridSearchCV` (validação cruzada de 5 dobras) e
+  comparado por acurácia e sensibilidade (recall macro), com matrizes de confusão e
+  validação cruzada final. Dataset `menegidio/iris-species`. Entrega em 01/10/2026.  
+  [Ver no Kaggle](https://www.kaggle.com/code/matheusgabrielalves/av-ia-classificacao-iris-matheus)
 
 ## Arquivos de apoio
 
